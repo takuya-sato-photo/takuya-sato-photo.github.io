@@ -1,0 +1,5 @@
+# 検索エンジンへの案内ファイル（すべてのページを見てOK、という意味）
+User-agent: *
+Allow: /
+
+Sitemap: https://takuya-sato-photo.github.io/sitemap.xml
