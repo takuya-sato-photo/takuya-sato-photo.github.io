@@ -112,6 +112,8 @@
   // 「相談する」ボタン（LINEがあればLINE、なければお問い合わせページへ）
   function consultButton(label, planName) {
     if (lineUrl) return extLink(lineUrl, { class: "btn btn-line" }, icon("line"), label || "LINEで相談する");
+    // LINE未設定のときは「LINE」と書かれたボタン名を使わず、お問い合わせページへ案内する
+    if (label && label.indexOf("LINE") !== -1) label = "";
     return h("a", { class: "btn btn-primary", href: "contact.html" }, label || "お問い合わせ・ご予約");
   }
 
